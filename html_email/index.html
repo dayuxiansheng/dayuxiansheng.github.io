@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- 鸣谢：HTML Email 编写，参考以下资料-->
+<!--《HTML Email 编写指南》 - 阮一峰的网络日志 （https://www.ruanyifeng.com/blog/2013/06/html_email.html） -->
+<!--《从头开始构建一个 HTML Email 模板》 （https://webdesign.tutsplus.com/zh-hans/articles/build-an-html-email-template-from-scratch--webdesign-12770） -->
+
+<!--目前，兼容性最好的Doctype是XHTML 1.0 Strict，事实上Gmail和Hotmail会删掉你的Doctype，换上这个Doctype。-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+　<head>
+
+　　<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+　　<title>大鱼鲜生</title>
+
+　　<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<link rel="icon" href="../favicon.png" type="image/x-icon">
+	
+　</head>
+
+
+
+<body style="margin: 0; padding: 0;">
+
+<td bgcolor="#ffffff" style="padding: 20px 0 30px 0;">
+  <!--网页的布局（layout）必须使用表格（table）。首先，放置一个最外层的大表格，用来设置背景。-->
+　<table border="0" cellpadding="0" cellspacing="0" width="100%">  
+  <!--表格的 border 属性等于1, 这样方便看到它的骨架，是为了方便开发。正式发布的时候，用简单的查找替换的方式，再把这个属性设为0。-->
+		<!--如果存在标签属性，直接写入HTML，不要用CSS-->
+		
+			<!--在内层容器表格中，放置第二个表格。用来展示内容。第二个table的宽度定为600像素的居中表格，防止超过客户端的显示宽度。600像素就是一个安全的最大宽度。。-->
+			
+		<table align="center" border="1" cellpadding="0" cellspacing="0" width="960" style="border: 1px solid #cccccc;" >
+		<!-- 虚线 style="border:1px dashed #000; height:0px" | 实线 style="border: 1px solid #cccccc;"-->
+		
+			<!--对于我们的email来说，tabl标签将会作为body标签，因为body标签的款式不被完全支持。 如果你想给email的body添加背景颜色，你需要把它应用在这个大表格上。-->
+			<!--设置你的单元格padding（内边距）和单元格spacing（间距）到0来避免任何不需要的空白区域出现在表格中。-->
+			<!--在HTML中用width属性设置宽度，不要用CSS。 HTML邮件开发的黄金规则就是：如果有属性，就用HTML不用CSS。-->
+			<!--我们同时添加了一个行内样式属性，将border-collapse设定为collapse。 如果我们不这么做，新一点版本的Outlook会在我们的表单和边框之间添加一个小的白色区域。-->
+
+  <tr>
+　　<td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0;">  
+	<img src="../images/logo.png" alt="Creating Email Magic" width="150" height="60" style="display: block;"/>
+	</td>
+    <!--邮件内容有几个部分，就设置几行（row）。-->
+　</tr>
+
+  <tr>
+　<td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;"> 
+    <!--邮件内容有几个部分，就设置几行（row）。-->
+	    <!--我们需要根据设计需要来为他们添加颜色， 由于bgcolor是一个有效地HTML属性标签，我们将用它来设置背景颜色，而不是CSS。-->
+		<!--永远记住使用全部六位数的16进制颜色代码，因为如果只是3位的简写有时候会不工作。-->
+
+ <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+  <tr>
+   <td align="center" style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+   
+	<b>大鱼鲜生</b><br>
+	以美食为载体 重拾心灵感动
+	</td>
+  </tr>
+  <tr>
+   <td align="text-align:left" style="padding: 20px 0 30px 0;">
+    大鱼鲜生，以数据和技术驱动的新零售平台。大鱼鲜生希望为消费者打造社区化的一站式新零售体验中心，用科技和人情味带给人们“鲜美生活”。 <br>
+	 <!--重拾人與人間的信任，從心感受到人情的溫暖-->
+  </td>
+ </tr> 
+
+
+ <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  
+   <hr style="border:1px dashed #000; height:0px">
+   	 <!--水平线标签:虚线 <hr size="0" noshade="noshade" color="#000" style="border:dashed"> -->
+  
+ <tr>
+  <td width="260" valign="top">   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      <img src="images/left-1.jpg" alt="" width="100%" height="140" style="display: block;" />
+     </td>
+    </tr>
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	<b>上海</b>（1店）<br>      
+张杨路3611号金桥<br>
+国际商业广场1座B1层<br>
+9:00-22:00 
+     </td>
+    </tr>
+   </table>   
+  </td>
+  
+  <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  <td width="260" valign="top">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      <img src="images/right-2.jpg" alt="" width="100%" height="140" style="display: block;" />
+     </td>
+    </tr>
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	<b>北京</b>（1店）<br>      
+西直门外大街112号<br>
+阳光大厦<br>
+9:00-22:00      
+	 </td>
+    </tr>
+   </table>  
+  </td>
+ </tr>
+</table>  
+  </td>
+ </tr>
+ 
+ <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="260" valign="top">   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+     &nbsp;
+     </td>
+    </tr>
+   </table>   
+  </td>
+  
+  <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  <td width="260" valign="top">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      &nbsp;
+     </td>
+    </tr>
+   </table>  
+  </td>
+ </tr>
+</table>  
+  </td>
+ </tr> 
+ 
+ <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="260" valign="top">   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      <img src="images/left-1.jpg" alt="" width="100%" height="140" style="display: block;" />
+     </td>
+    </tr>
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	<b>上海</b>（2店）<br>      
+张杨路3611号金桥<br>
+国际商业广场1座B1层<br>
+9:00-22:00 
+     </td>
+    </tr>
+   </table>   
+  </td>
+  
+  <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  <td width="260" valign="top">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      <img src="images/right-2.jpg" alt="" width="100%" height="140" style="display: block;" />
+     </td>
+    </tr>
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	<b>北京</b>（2店）<br>      
+西直门外大街112号<br>
+阳光大厦<br>
+9:00-22:00      
+	 </td>
+    </tr>
+   </table>  
+  </td>
+ </tr>
+</table>  
+  </td>
+ </tr>
+ 
+  <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="260" valign="top">   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+     &nbsp;
+     </td>
+    </tr>
+   </table>   
+  </td>
+  
+  <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  <td width="260" valign="top">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      &nbsp;
+     </td>
+    </tr>
+   </table>  
+  </td>
+ </tr>
+</table>  
+  </td>
+ </tr> 
+ 
+ <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="260" valign="top">   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      <img src="images/left-1.jpg" alt="" width="100%" height="140" style="display: block;" />
+     </td>
+    </tr>
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	<b>上海</b>（3店）<br>      
+张杨路3611号金桥<br>
+国际商业广场1座B1层<br>
+9:00-22:00 
+     </td>
+    </tr>
+   </table>   
+  </td>
+  
+  <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  <td width="260" valign="top">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      <img src="images/right-2.jpg" alt="" width="100%" height="140" style="display: block;" />
+     </td>
+    </tr>
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	<b>北京</b>（3店）<br>      
+西直门外大街112号<br>
+阳光大厦<br>
+9:00-22:00      
+	 </td>
+    </tr>
+   </table>  
+  </td>
+ </tr>
+</table>  
+  </td>
+ </tr> 
+ 
+  <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="260" valign="top">   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+     &nbsp;
+     </td>
+    </tr>
+   </table>   
+  </td>
+  
+  <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  <td width="260" valign="top">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td>
+      &nbsp;
+     </td>
+    </tr>
+   </table>  
+  </td>
+ </tr>
+</table>  
+  </td>
+ </tr> 
+ 
+</table>
+
+<hr style="border:1px dashed #000; height:0px">
+   	 <!--水平线标签:虚线 <hr size="0" noshade="noshade" color="#000" style="border:dashed"> -->
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td width="260" valign="top">
+   
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <td style="padding: 25px 0 0 0;">
+	 	
+
+          <p align="left"><em>热线电话(8:00-21:30)</em></p>
+
+          <p align="center"><strong>400-828-8000</strong><small>&</small><strong>9510800</strong></p>
+
+     </td>
+    </tr>
+   </table>
+   
+    <td style="font-size: 0; line-height: 0;" width="20">
+   &nbsp;
+  </td>
+  
+  </td>
+  <td width="260" valign="top">
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+     <tr>
+     <td align="center" style="padding: 25px 0 0 0;">
+	 	
+		  <p class="social-weixin">微信公众号搜索・<b>大鱼鲜生</b></p>
+		
+	 </td>
+    </tr>
+	
+	 <tr>
+     <td align="center">
+	 	<img src="images/logo.png" alt="Creating Email Magic" width="150" height="60" style="display: block;"/>
+
+     </td>
+    </tr>
+   </table>
+  
+  </td>
+ </tr>
+</table>
+  
+
+
+	</td>
+  </tr>
+
+　<tr>
+　　<td bgcolor="#ee4c50" style="padding: 30px 30px 30px 30px;"> 
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+		
+<td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
+
+ <a href="#" style="color: #ffffff;"><font color="#ffffff">订阅</font></a> &reg; 大鱼鲜生
+ <td align="center" style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">Copyright © 2018</td>
+     
+</td>
+		
+		<td align="right">
+	<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+   <td>
+    <a href="https://twitter.com/">
+     <img src="images/Twitter.png" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
+    </a>
+   </td>
+   <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+   <td>
+    <a href="https://www.Facebook.com/">
+     <img src="images/Facebook.png" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
+    </a>
+   </td>
+   
+  </tr>
+ </table>
+</td>
+		</tr>
+		</table>
+ </td>
+    <!--邮件内容有几个部分，就设置几行（row）。-->
+　</tr>
+
+
+
+    <!--所有的CSS规则，最好都采用行内样式。因为放置在网页头部的样式，很可能会被客户端删除。-->
+　<p style="margin-top: 1em; margin-bottom: 1em; margin-left: 0; margin-right: 0;">
+    <!--要完整形式，不要采用CSS的简写形式，有些客户端不支持。-->
+	
+	<!--图片是唯一可以引用的外部资源。其他的外部资源，
+	   比如样式表文件、字体文件、视频文件等，一概不能引用。
+       有些客户端会给图片链接加上边框，要去除边框。-->
+	   
+　　<img border="0" style="display:block;">
+
+	<!--需要注意的是，不少客户端默认不显示图片（比如Gmail），所以要确保即使没有图片，主要内容也能被阅读。-->
+	
+		</table>
+　</table>
+</td>
+</body>
+
+</html>
