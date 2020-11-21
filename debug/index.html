@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>网站正在维护升级中...</title>
@@ -18,7 +18,7 @@
 <body>
     <script>
     var d1 = new Date();
-    var d2 = new Date('2019-12-31 23:59:59');
+    var d2 = new Date('2020-12-31 23:59:59');
     s = (d2 - d1);
     $(document).ready(function() {
 	$('#counter').countdown({
@@ -50,7 +50,9 @@
        <audio autoplay="autoplay" loop="loop"> 
        <source src="../Sea.mp3" type="audio/mpeg">
       </audio>
-	<p>Copyright © 2018 dayuxiansheng.cn</p>
+	<p>Copyright © <script>// <![CDATA[
+                 document.write(new Date().getFullYear());
+                 // ]]></script>  dayuxiansheng.cn</p>
 </div></div>
 </body>
 </html>
