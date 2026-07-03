@@ -1,6 +1,6 @@
 <!-- 2026年7月3日备忘录：域名出售页【通用模板】无需更改 -->
 
-###<a href="https://www.qianwen.com/chat/12fbb23576924236a13fbb28ba126a97?ch=tongyi_redirect">千问-阿里 AI 助手</a>： sell.html 是什么意思？
+### <a href="https://www.qianwen.com/chat/12fbb23576924236a13fbb28ba126a97?ch=tongyi_redirect">千问-阿里 AI 助手</a>： sell.html 是什么意思？
 
 `sell.html` 就是"**出售页面**"的意思，`sell` 在英文中是"卖、出售"的意思。这是域名出售页面最常见的命名方式之一。
 
